@@ -47,6 +47,42 @@ html.theme-locked .signal::before { background:var(--green); }
 html.theme-locked :is(.desktop-nav a:hover,.desktop-nav a[aria-current],.mobile-links a[aria-current]) { background:var(--accent-soft); color:var(--green); }
 html.theme-locked .ticker { background:var(--dark); border-color:var(--dark-line); }
 html.theme-locked .ticker-set span { background:var(--deep); border-color:var(--dark-line); color:var(--on-dark); }
+html.theme-locked .category-strip { width:min(600px,100%); margin:0 auto; border:1px solid var(--chip-line); border-radius:999px; background:var(--accent-soft); padding:2px 0; }
+html.theme-locked .category-strip .ticker-window { border-radius:999px; scrollbar-width:none; }
+html.theme-locked .category-strip .ticker-window::-webkit-scrollbar { display:none; }
+html.theme-locked .category-strip .ticker-window:focus-visible { outline-color:var(--green); }
+html.theme-locked .category-strip .ticker-set { gap:18px; padding-right:18px; }
+html.theme-locked .category-strip .ticker-set span { padding:3px 10px; border-color:transparent; background:transparent; color:var(--green); font-size:11px; line-height:1.5; }
+html.theme-locked .category-strip.motion-ready .ticker-window { overflow-x:hidden; mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent); }
+html.theme-locked .category-strip.motion-ready .ticker-track { min-width:200%; animation:move-authorities 26s linear infinite; }
+html.theme-locked .category-strip.motion-ready .ticker-set[aria-hidden] { display:flex; }
+html.theme-locked .category-strip:hover .ticker-track,
+html.theme-locked .category-strip:focus-within .ticker-track { animation-play-state:paused; }
+html.theme-locked .hero h1 { animation:headline-arrive .7s cubic-bezier(.2,.65,.3,1) both; }
+html.theme-locked .hero h1 span {
+  background:linear-gradient(105deg,var(--green) 15%,#36886f 40%,var(--green) 65%);
+  background-size:230% 100%;
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:headline-shine 9s ease-in-out infinite;
+}
+@keyframes headline-arrive {
+  from { transform:translateY(8px); opacity:.94; }
+  to { transform:translateY(0); opacity:1; }
+}
+@keyframes headline-shine {
+  0%,25% { background-position:100% 50%; }
+  65%,100% { background-position:0 50%; }
+}
+.buyer-heading { display:flex; align-items:center; flex-wrap:wrap; gap:8px 12px; }
+.buyer-person .buyer-rating { display:inline-flex; gap:2px; color:#8c640a; font:15px/1 "Segoe UI Symbol","Segoe UI",sans-serif; }
+.buyer-rating > span { display:inline-block; color:inherit; font:inherit; animation:star-wave 4.8s ease-in-out infinite; animation-delay:calc(var(--star-index) * 120ms); }
+.buyer-card:hover .buyer-rating > span,.buyer-card:focus-within .buyer-rating > span { animation-play-state:paused; }
+@keyframes star-wave {
+  0%,14%,40%,100% { transform:translateY(0) scale(1); }
+  27% { transform:translateY(-3px) scale(1.08); }
+}
 html.theme-locked .site-footer { background:var(--deep); border-top-color:var(--accent); }
 html.theme-locked :is(.footer-column h2,.footer-brand>span,.footer-description,.footer-bottom p,.footer-meta) { color:var(--dark-muted); }
 html.theme-locked .join-card { background:var(--dark); }
@@ -88,5 +124,17 @@ html.theme-locked [data-motion-card]:focus-within { --scroll-y:0px!important; --
 @media(prefers-reduced-motion:reduce) {
   html.theme-locked [data-motion-card] { transform:none!important; }
   html.theme-locked :is(.button,.text-link)>span[aria-hidden="true"] { transition:none!important; transform:none!important; }
+  html.theme-locked .hero h1 { animation:none; transform:none; opacity:1; }
+  html.theme-locked .hero h1 span { animation:none; background:none; color:var(--green); }
+  html.theme-locked .category-strip.motion-ready .ticker-track { animation:none; min-width:100%; }
+  html.theme-locked .category-strip.motion-ready .ticker-window { overflow-x:auto; mask-image:none; }
+  html.theme-locked .category-strip.motion-ready .ticker-set[aria-hidden] { display:none; }
+  .buyer-rating > span { animation:none; transform:none; }
 }
-@media print { html.theme-locked [data-motion-card] { transform:none!important; } }
+@media(forced-colors:active) { html.theme-locked .hero h1 span { background:none; color:CanvasText; } }
+@media print {
+  html.theme-locked [data-motion-card] { transform:none!important; }
+  html.theme-locked .hero h1, .buyer-rating > span { animation:none; transform:none; }
+  html.theme-locked .hero h1 span { animation:none; background:none; color:var(--ink); }
+  .category-strip { display:none; }
+}

@@ -31,10 +31,12 @@
     });
   }
 
-  const ticker = document.querySelector(".ticker");
-  if (ticker) {
+  const tickers = document.querySelectorAll(".ticker, .category-strip");
+  if (tickers.length) {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const applyMotion = () => { ticker.classList.toggle("motion-ready", !reduced.matches); };
+    const applyMotion = () => {
+      tickers.forEach(ticker => ticker.classList.toggle("motion-ready", !reduced.matches));
+    };
     applyMotion();
     reduced.addEventListener("change", applyMotion);
   }
