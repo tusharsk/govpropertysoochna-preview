@@ -1,0 +1,4 @@
+.brand-name{font-size:22px;letter-spacing:-.05em}
+@media(max-width:900px){.brand-name{font-size:20px}}
+@media(max-width:760px){.brand-name{font-size:18px}.brand .brand-mark{width:33px;height:33px}.brand{gap:8px}.brand-tagline{font-size:8px}}
+@media(max-width:400px){.mobile-nav summary{font-size:0;width:44px;padding:12px;gap:0}.menu-icon{flex-shrink:0}}
