@@ -47,7 +47,7 @@ html.theme-locked .signal::before { background:var(--green); }
 html.theme-locked :is(.desktop-nav a:hover,.desktop-nav a[aria-current],.mobile-links a[aria-current]) { background:var(--accent-soft); color:var(--green); }
 html.theme-locked .ticker { background:var(--dark); border-color:var(--dark-line); }
 html.theme-locked .ticker-set span { background:var(--deep); border-color:var(--dark-line); color:var(--on-dark); }
-html.theme-locked .category-strip { width:min(600px,100%); margin:0 auto; border:1px solid var(--chip-line); border-radius:999px; background:var(--accent-soft); padding:2px 0; }
+html.theme-locked .category-strip { width:min(420px,100%); margin:0 auto; border:1px solid var(--chip-line); border-radius:999px; background:var(--accent-soft); padding:2px 0; }
 html.theme-locked .category-strip .ticker-window { border-radius:999px; scrollbar-width:none; }
 html.theme-locked .category-strip .ticker-window::-webkit-scrollbar { display:none; }
 html.theme-locked .category-strip .ticker-window:focus-visible { outline-color:var(--green); }
