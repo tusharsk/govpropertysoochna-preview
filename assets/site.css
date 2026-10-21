@@ -132,9 +132,12 @@ p { margin-bottom:18px; color:var(--text); }
 .method-icon { display:grid; place-items:center; width:42px; height:42px; background:#e1eee6; color:var(--green); border-radius:12px; font-size:24px; margin-bottom:22px; }
 .method-card p { max-width:280px; margin:0; font-size:16px; color:var(--muted); }
 .buyers-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; align-items:center; }
-.proof-stats { display:flex; gap:38px; margin-top:26px; }
+.proof-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin-top:26px; }
 .proof-stats strong { display:block; color:var(--green); font-size:48px; line-height:1; letter-spacing:-.05em; font-weight:650; }
 .proof-stats span { display:block; max-width:170px; margin-top:10px; color:var(--muted); font-size:14px; }
+.proof-stats .proof-rating { border-left:1px solid #e0d0ad; padding-left:18px; }
+.proof-stats .proof-rating strong { color:#916710; white-space:nowrap; }
+.proof-stats .rating-star { display:inline; margin:0 0 0 5px; color:inherit; font-size:.55em; vertical-align:middle; }
 .buyer-cards { display:grid; gap:16px; }
 .buyer-card { padding:24px; border:1px solid var(--line); border-radius:14px; background:#fff; }
 .buyer-person { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
@@ -320,9 +323,11 @@ dialog form { margin:0 0 0 auto; }
   .method-card h3 { font-size:22px; margin:0 0 5px; }
   .method-card p { max-width:none; font-size:14px; }
   .buyers-grid,.faq-layout { grid-template-columns:1fr; gap:25px; }
-  .proof-stats { gap:30px; margin-top:18px; }
+  .proof-stats { gap:14px; margin-top:18px; }
   .proof-stats strong { font-size:37px; }
   .proof-stats span { font-size:13px; max-width:150px; }
+  .proof-stats .proof-rating { padding-left:12px; }
+  .proof-stats .rating-star { font-size:.55em; }
   .buyer-card { padding:18px; }
   .buyer-person { margin-bottom:10px; }
   .buyer-card p { font-size:15px; }

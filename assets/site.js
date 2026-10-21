@@ -31,7 +31,7 @@
     });
   }
 
-  const tickers = document.querySelectorAll(".ticker, .category-strip");
+  const tickers = document.querySelectorAll(".ticker");
   if (tickers.length) {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     const applyMotion = () => {
