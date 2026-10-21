@@ -145,6 +145,7 @@ p { margin-bottom:18px; color:var(--text); }
 .buyer-person h3 { margin:0; font-size:22px; }
 .buyer-person span { font-size:12px; color:var(--muted); }
 .buyer-card p { margin:0; font-size:16px; }
+.buyer-card blockquote { margin:0; }
 .faq-stage { background:#f8faf9; }
 .faq-layout { display:grid; grid-template-columns:1.1fr 1fr; gap:58px; align-items:center; }
 .faq-list { border-top:1px solid var(--line); }

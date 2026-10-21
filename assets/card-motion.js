@@ -21,11 +21,12 @@
       const top = rect.top - currentY - hoverY - card.element.offsetHeight * .6 * (1 - currentScale);
       const progress = Math.max(0, Math.min(1, (innerHeight * .92 - top) / (innerHeight * .52)));
       const remaining = 1 - progress;
-      const strength = card.hero ? 12 : 38;
+      const expressive = root.dataset.motionLevel === "expressive";
+      const strength = card.hero ? 12 : (expressive ? 64 : 38);
       return {
         card,
         y: Math.round(remaining * strength * (card.index % 2 === 0 ? 1 : .82) * 100) / 100,
-        scale: 1 - remaining * (card.hero ? .006 : .018)
+        scale: 1 - remaining * (card.hero ? .006 : (expressive ? .03 : .018))
       };
     });
     positions.forEach(({card, y, scale}) => {
