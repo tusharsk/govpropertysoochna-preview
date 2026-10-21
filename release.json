@@ -7,5 +7,10 @@
   "latestBulletin": "2026-10-19",
   "directoryRegions": 32,
   "directoryAuthoritySources": 62,
-  "generatedAt": "2026-10-21T17:07:38.457663+00:00"
+  "freeRegions": [
+    "delhi-ncr"
+  ],
+  "paidMonthlyRegionPrice": 9,
+  "accessMode": "Manual access enquiries; no checkout or membership backend",
+  "generatedAt": "2026-10-21T18:30:05.190760+00:00"
 }

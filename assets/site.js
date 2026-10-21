@@ -41,25 +41,7 @@
     reduced.addEventListener("change", applyMotion);
   }
 
-  const dialog = document.getElementById("channel-dialog");
-  if (dialog && typeof dialog.showModal === "function") {
-    document.querySelectorAll("[data-channel-unavailable]").forEach(link => {
-      link.addEventListener("click", event => {
-        event.preventDefault();
-        document.getElementById("channel-region").textContent = link.dataset.regionName;
-        document.getElementById("channel-contact").href = link.href;
-        dialog.showModal();
-      });
-    });
-    dialog.addEventListener("click", event => {
-      if (event.target === dialog) {
-        const rect = dialog.getBoundingClientRect();
-        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
-      }
-    });
-  }
-
-  const wireSearch = ({ inputId, clearId, cardsSelector, chipSelector, statusId, emptyId, noun, published, geographyId, publicationId }) => {
+  const wireSearch = ({ inputId, clearId, cardsSelector, chipSelector, statusId, emptyId, noun, published, geographyId }) => {
     const input = document.getElementById(inputId);
     if (!input) return;
     const clear = document.getElementById(clearId);
@@ -67,8 +49,7 @@
     const empty = document.getElementById(emptyId);
     if (!clear || !status || !empty) throw new Error(`Incomplete search controls for ${inputId}`);
     const geography = geographyId ? document.getElementById(geographyId) : null;
-    const publication = publicationId ? document.getElementById(publicationId) : null;
-    if ((geographyId && !geography) || (publicationId && !publication)) throw new Error(`Incomplete region filters for ${inputId}`);
+    if (geographyId && !geography) throw new Error(`Incomplete region filters for ${inputId}`);
     const cards = Array.from(document.querySelectorAll(cardsSelector));
     const chips = Array.from(document.querySelectorAll(chipSelector));
     const apply = (value, selected) => {
@@ -76,15 +57,14 @@
       let matches = 0;
       cards.forEach(card => {
         card.hidden = !terms.every(term => card.dataset.search.toLowerCase().includes(term))
-          || Boolean(geography?.value && !card.dataset.geography.split("|").includes(geography.value))
-          || Boolean(publication?.value && card.dataset.publication !== publication.value);
+          || Boolean(geography?.value && !card.dataset.geography.split("|").includes(geography.value));
         if (!card.hidden) matches += 1;
       });
       chips.forEach(chip => {
         const filter = chip.dataset.regionFilter ?? chip.dataset.filter;
-        chip.setAttribute("aria-pressed", String(chip === selected || (!terms.length && !geography?.value && !publication?.value && filter === "")));
+        chip.setAttribute("aria-pressed", String(chip === selected || (!terms.length && !geography?.value && filter === "")));
       });
-      clear.disabled = !value && !geography?.value && !publication?.value;
+      clear.disabled = !value && !geography?.value;
       empty.hidden = matches !== 0;
       status.textContent = `${matches} ${noun}${matches === 1 ? "" : "s"} ${published ? "in the published snapshot." : "found"}`;
     };
@@ -93,7 +73,6 @@
     clear.addEventListener("click", () => {
       input.value = "";
       if (geography) geography.value = "";
-      if (publication) publication.value = "";
       apply("", null);
       input.focus();
     });
@@ -101,12 +80,10 @@
       input.value = chip.dataset.regionFilter ?? chip.dataset.filter;
       if (!input.value) {
         if (geography) geography.value = "";
-        if (publication) publication.value = "";
       }
       apply(input.value, chip);
     }));
     geography?.addEventListener("change", () => apply(input.value, null));
-    publication?.addEventListener("change", () => apply(input.value, null));
     const controls = input.closest("[data-search-controls]");
     if (controls) controls.hidden = false;
     input.value = new URLSearchParams(location.search).get("q") || "";
@@ -116,7 +93,7 @@
     inputId: "region-search", clearId: "region-clear",
     cardsSelector: "#region-results [data-search]", chipSelector: "[data-region-filter]",
     statusId: "region-status", emptyId: "region-empty", noun: "region", published: false,
-    geographyId: "region-geography", publicationId: "region-publication"
+    geographyId: "region-geography"
   });
   wireSearch({
     inputId: "city-search", clearId: "city-clear",
@@ -132,8 +109,14 @@
     const empty = document.getElementById("archive-empty");
     const emptyTitle = document.getElementById("archive-empty-title");
     const emptyLink = document.getElementById("archive-empty-link");
-    if (!status || !empty || !select || !emptyTitle || !emptyLink) throw new Error("Incomplete archive filter controls");
+    const emptyDescription = document.getElementById("archive-empty-description");
+    if (!status || !empty || !select || !emptyTitle || !emptyLink || !emptyDescription) throw new Error("Incomplete archive filter controls");
     const names = new Map(Array.from(select.options).map(option => [option.value, option.textContent]));
+    const prices = new Map(Array.from(select.options).map(option => {
+      const price = Number(option.dataset.price);
+      if (!Number.isFinite(price) || price < 0) throw new Error("Invalid archive edition price");
+      return [option.value, price];
+    }));
     const apply = value => {
       let count = 0;
       cards.forEach(card => {
@@ -142,12 +125,14 @@
       });
       archiveButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.archiveFilter === value)));
       select.value = value;
-      status.textContent = `${count} published bulletin${count === 1 ? "" : "s"}`;
+      const paid = prices.get(value) > 0;
+      status.textContent = paid ? "Members-only regional edition" : `${count} published bulletin${count === 1 ? "" : "s"}`;
       empty.hidden = count !== 0;
       if (!count && value) {
-        emptyTitle.textContent = `No ${names.get(value)} bulletins yet.`;
-        emptyLink.href = `../regions/${value}/`;
-        emptyLink.textContent = `View ${names.get(value)} coverage`;
+        emptyTitle.textContent = paid ? `Unlock ${names.get(value)} bulletins.` : "No matching bulletins.";
+        emptyDescription.textContent = paid ? `Rs ${prices.get(value)}/month for this region's bulletins and scheme updates.` : "Browse all bulletins or explore this region's coverage.";
+        emptyLink.href = `../regions/${value}/${paid ? "#edition-access-title" : ""}`;
+        emptyLink.textContent = paid ? "View access options" : `View ${names.get(value)} coverage`;
       }
     };
     const currentFilter = () => {

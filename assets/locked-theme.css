@@ -91,8 +91,9 @@ html.theme-locked[data-motion="flow"]:not([data-reduced-motion="true"]) [data-mo
   transition:--hover-y .22s ease,box-shadow .25s ease,border-color .25s ease;
   transform-origin:50% 60%;
 }
-html.theme-locked[data-motion="flow"]:not([data-reduced-motion="true"]) :is(.button,.text-link)>span[aria-hidden="true"] { display:inline-block; transition:transform .2s ease; }
-html.theme-locked[data-motion="flow"]:not([data-reduced-motion="true"]) :is(.button,.text-link):hover>span[aria-hidden="true"] { transform:translateX(3px); }
+/* Responsive text labels keep their breakpoint visibility; only decorative spans animate. */
+html.theme-locked[data-motion="flow"]:not([data-reduced-motion="true"]) :is(.button,.text-link)>span[aria-hidden="true"]:not(.button-label-full,.button-label-short) { display:inline-block; transition:transform .2s ease; }
+html.theme-locked[data-motion="flow"]:not([data-reduced-motion="true"]) :is(.button,.text-link):hover>span[aria-hidden="true"]:not(.button-label-full,.button-label-short) { transform:translateX(3px); }
 html.theme-locked [data-motion-card]:focus-within { --scroll-y:0px!important; --hover-y:0px!important; --card-scale:1!important; }
 @media(hover:hover) and (pointer:fine) {
   html.theme-locked[data-motion="flow"]:not([data-reduced-motion="true"]) [data-motion-card]:hover { --hover-y:-5px; box-shadow:0 18px 32px var(--accent-glow); }
@@ -113,7 +114,7 @@ html.theme-locked [data-motion-card]:focus-within { --scroll-y:0px!important; --
 }
 @media(prefers-reduced-motion:reduce) {
   html.theme-locked [data-motion-card] { transform:none!important; }
-  html.theme-locked :is(.button,.text-link)>span[aria-hidden="true"] { transition:none!important; transform:none!important; }
+  html.theme-locked :is(.button,.text-link)>span[aria-hidden="true"]:not(.button-label-full,.button-label-short) { transition:none!important; transform:none!important; }
   html.theme-locked .hero h1 { animation:none; transform:none; opacity:1; }
   html.theme-locked .hero h1 span { animation:none; background:none; color:var(--green); }
   .buyer-rating > span { animation:none; transform:none; }

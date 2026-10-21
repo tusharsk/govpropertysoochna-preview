@@ -8,5 +8,5 @@
       }
     });
   }, {threshold: .3});
-  document.querySelectorAll("main > section h2,.page-head h1,.detail-head h1,.about-intro h1").forEach(heading => observer.observe(heading));
+  document.querySelectorAll("main > section h2,.page-head h1,.detail-head h1,.about-intro h1,.publication h1,.publication-content > section > h2,.review-content > section > h2").forEach(heading => observer.observe(heading));
 })();

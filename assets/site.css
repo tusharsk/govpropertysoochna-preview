@@ -54,6 +54,7 @@ p { margin-bottom:18px; color:var(--text); }
 .mobile-nav[open] .menu-icon::before { transform:translateY(3px) rotate(45deg); }
 .mobile-nav[open] .menu-icon::after { transform:translateY(-3px) rotate(-45deg); }
 .mobile-links { position:fixed; right:18px; left:18px; top:calc(var(--nav) + 10px); max-height:calc(100svh - var(--nav) - 24px); overflow-y:auto; background:white; border:1px solid #d6e4dd; box-shadow:0 18px 45px #173b4326; border-radius:16px; padding:12px; }
+.mobile-nav:not([open]) .mobile-links { display:none; }
 .mobile-links a { display:flex; align-items:center; justify-content:space-between; min-height:48px; padding:12px 14px; border-radius:8px; color:var(--ink); font-size:15px; text-decoration:none; }
 .mobile-links a:hover,.mobile-links a[aria-current=page] { color:var(--green); background:#edf5ef; }
 .mobile-links .mobile-join { justify-content:center; gap:20px; color:white; background:var(--green); margin-top:10px; font-weight:700; }
@@ -63,7 +64,6 @@ p { margin-bottom:18px; color:var(--text); }
 .button:hover { transform:translateY(-2px); box-shadow:0 13px 26px #147e6e30; }
 .button.secondary { color:#234047; border-color:#c6d7d2; background:#fff; box-shadow:0 3px 9px #183b4305; }
 .button.small-button { min-height:44px; padding:10px 18px; font-size:13px; }
-.button-label-short { display:none; }
 .text-link { display:inline-flex; align-items:center; min-height:44px; gap:10px; font-size:14px; font-weight:650; }
 .actions { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
 .stage { min-height:calc(100svh - var(--nav)); display:flex; align-items:center; padding:44px 0; border-bottom:1px solid #e1e9e6; }
@@ -130,7 +130,7 @@ p { margin-bottom:18px; color:var(--text); }
 .directory-card-meta { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-bottom:20px; color:var(--muted); font-size:12px; }
 .directory-regions .card-top h3,.featured-regions .card-top h3 { font-size:23px; overflow-wrap:anywhere; }
 .directory-regions .region-caption,.featured-regions .region-caption { font-size:13px; }
-.directory-filters { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px; }
+.directory-filters { display:grid; grid-template-columns:1fr; max-width:520px; gap:16px; margin-top:18px; }
 .directory-filters select,#archive-region { display:block; min-height:44px; width:100%; padding:9px 12px; margin-top:6px; border:1px solid var(--line); border-radius:8px; background:var(--surface,#fff); color:var(--ink); }
 .archive-controls { max-width:600px; margin-bottom:22px; }
 .archive-controls .filters { margin-bottom:18px; }
@@ -139,6 +139,16 @@ p { margin-bottom:18px; color:var(--text); }
 .authority-reference h3 { font-size:21px; overflow-wrap:anywhere; }
 .authority-reference .source-role { color:var(--muted); font-size:12px; font-weight:650; margin-bottom:10px; }
 .authority-reference .small { margin-bottom:10px; }
+.access-badge { display:inline-flex; align-items:center; gap:6px; padding:5px 9px; border:1px solid var(--line); border-radius:7px; color:var(--ink); background:var(--soft,#f4f7f3); font-size:12px; font-weight:700; }
+.access-badge.free { color:var(--green); background:var(--accent-soft,#edf5e9); border-color:var(--chip-line,#c7d8bf); }
+.lock-icon { flex:0 0 auto; vertical-align:middle; }
+.edition-access { display:grid; grid-template-columns:1.5fr 1fr; align-items:center; gap:32px; padding:28px; margin:26px 0; border:1px solid var(--line); border-radius:16px; background:var(--surface,#fff); }
+.edition-access h2 { font-size:30px; margin:16px 0 12px; }
+.edition-access p { margin-bottom:10px; }
+.edition-access-action { text-align:center; }
+.edition-access-action > strong { display:block; font-size:34px; color:var(--ink); line-height:1.2; }
+.edition-access-action > strong > span { font-size:15px; font-weight:500; }
+.edition-access-action p { color:var(--muted); font-size:12px; margin-top:6px; }
 @media(min-width:1101px) {
   .directory-regions { grid-template-columns:repeat(3,minmax(0,1fr)); }
   .featured-regions { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
@@ -201,7 +211,7 @@ p { margin-bottom:18px; color:var(--text); }
 .footer-meta a:hover { color:#a0e1c9; }
 .subpage { padding:45px 0 65px; }
 .page-head { max-width:780px; margin-bottom:30px; }
-.page-head h1 { margin-bottom:16px; }
+.page-head h1 { margin-bottom:16px; overflow-wrap:anywhere; }
 .crumb { display:inline-block; font-size:13px; margin-bottom:22px; }
 .search-area { padding:24px; background:#f2f7f4; border:1px solid var(--line); border-radius:14px; margin-bottom:22px; }
 .search-area label,.search-label { display:block; font-size:13px; font-weight:650; margin-bottom:9px; }
@@ -326,14 +336,15 @@ dialog form { margin:0 0 0 auto; }
   .home-regions .region-card { scroll-snap-align:start; }
   .regions-grid:not(.home-regions) { grid-template-columns:1fr; }
   .directory-filters,.authority-grid { grid-template-columns:1fr; }
+  .edition-access { grid-template-columns:1fr; gap:18px; padding:22px; }
+  .edition-access h2 { font-size:26px; }
+  .edition-access-action { text-align:left; }
   .region-card { padding:20px; }
   .card-top h3 { font-size:27px; }
   .card-top { gap:10px; }
   .region-card .actions { gap:8px; }
   .region-card .button { font-size:12px; padding:10px 14px; }
   .region-card .text-link { font-size:13px; }
-  .region-card .button-label-full { display:none; }
-  .region-card .button-label-short { display:inline; }
   .card-latest { font-size:11px; padding-top:12px; }
   .region-card-bottom { margin-top:10px; gap:4px 10px; }
   .swipe-note { display:block; font-size:11px; margin:6px 0 0; color:var(--muted); }
@@ -416,6 +427,10 @@ dialog form { margin:0 0 0 auto; }
   .ticker.motion-ready .ticker-window { overflow-x:auto; mask-image:none; }
   .ticker.motion-ready .ticker-set[aria-hidden] { display:none; }
   .button,.offer-join,.site-header,.desktop-nav a,.menu-icon::before,.menu-icon::after { transition:none; }
+}
+@media(max-width:400px) {
+  .mobile-nav summary { font-size:0; width:44px; padding:12px; gap:0; }
+  .menu-icon { flex-shrink:0; }
 }
 @media print {
   .site-header,.site-footer,.ticker,.actions,.search-area,.filters,.archive-controls,.swipe-note { display:none; }

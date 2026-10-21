@@ -14,6 +14,7 @@ html.theme-locked[data-theme="india"] {
   --wash-strong:#fffdf9d9; --wash-medium:#fffdf9b3; --wash-edge:#fffdf91a;
   --offer-surface:#fff2de; --offer-line:#dda666; --offer-accent:#93430d;
 }
+html.theme-locked[data-theme="india"] :is(h1,h2,h3) { overflow-wrap:anywhere; }
 html.theme-locked[data-theme="india"] .telegram-button {
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   min-height:44px; max-width:100%; padding:9px 13px; border:1px solid #086b9a;
