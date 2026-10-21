@@ -43,7 +43,10 @@
       <p class="eyebrow">Regions &amp; authorities</p>
       <h1>Find your region.<br>Know what we cover.</h1>
       <p class="lead">Search by region, city or authority. Choose the edition that fits your property search.</p>
+      <p class="directory-summary">32 regions &middot; 62 unique authority sources</p>
     </header>
+    <p class="notice">Delhi NCR has published bulletins. Other editions are being prepared.
+    Directory entries are onboarding scope, not live scheme availability. Authority counts include watchlist and planning references.</p>
     <div class="search-area" data-search-controls hidden>
       <label for="region-search">Search region, city or authority</label>
       <div class="search-input"><input id="region-search" type="search" placeholder="Try Lucknow, Delhi or LDA" autocomplete="off">
@@ -51,40 +54,466 @@
       <div class="filters" role="group" aria-label="Filter regions">
         <button type="button" data-region-filter="" aria-pressed="true">All regions</button>
         <button type="button" data-region-filter="delhi" aria-pressed="false">Delhi NCR</button>
-        <button type="button" data-region-filter="lucknow" aria-pressed="false">Central UP</button>
+        <button type="button" data-region-filter="lucknow" aria-pressed="false">Lucknow</button>
+      </div>
+      <div class="directory-filters">
+        <label for="region-geography">State or union territory<select id="region-geography"><option value="">All states and UTs</option><option value="Andhra Pradesh">Andhra Pradesh</option><option value="Assam">Assam</option><option value="Bihar">Bihar</option><option value="Chandigarh">Chandigarh</option><option value="Chhattisgarh">Chhattisgarh</option><option value="Delhi">Delhi</option><option value="Goa">Goa</option><option value="Gujarat">Gujarat</option><option value="Haryana">Haryana</option><option value="Himachal Pradesh">Himachal Pradesh</option><option value="Jammu and Kashmir">Jammu and Kashmir</option><option value="Jharkhand">Jharkhand</option><option value="Karnataka">Karnataka</option><option value="Kerala">Kerala</option><option value="Madhya Pradesh">Madhya Pradesh</option><option value="Maharashtra">Maharashtra</option><option value="Odisha">Odisha</option><option value="Punjab">Punjab</option><option value="Rajasthan">Rajasthan</option><option value="Tamil Nadu">Tamil Nadu</option><option value="Telangana">Telangana</option><option value="Uttar Pradesh">Uttar Pradesh</option><option value="Uttarakhand">Uttarakhand</option><option value="West Bengal">West Bengal</option></select></label>
+        <label for="region-publication">Edition status<select id="region-publication"><option value="">All editions</option><option value="published">Published bulletin</option><option value="preparing">In preparation</option></select></label>
       </div>
     </div>
-    <noscript><p class="notice">Search needs JavaScript. Both regional editions are listed below.</p></noscript>
-    <p id="region-status" class="search-status" role="status" aria-live="polite">2 regions found</p>
+    <noscript><p class="notice">Search needs JavaScript. All 32 regions are listed below.</p></noscript>
+    <p id="region-status" class="search-status" role="status" aria-live="polite">32 regions found</p>
     <div id="region-results">
-    <div class="regions-grid">
-    <article class="region-card" data-search="delhi ncr dda hsvp huda gda ghaziabad mda meerut yeida noida haryana faridabad gurugram tcp" data-region="delhi-ncr">
-      <div class="card-top"><h3>Delhi NCR</h3><span class="badge">Residential</span></div>
-      <p class="region-caption">Residential plots &amp; flats.</p><p class="authority-label">Authorities covered</p>
-      <ul class="pills" aria-label="Delhi NCR authorities"><li>DDA</li><li>HSVP / HUDA</li><li>GDA</li><li>MDA</li><li>YEIDA</li><li>TCP Haryana</li></ul><p class="small">TCP Haryana covers regulated-private flats.</p>
+    <div class="regions-grid directory-regions">
+    <article class="region-card" data-search="delhi ncr delhi ncr haryana uttar pradesh delhi delhi ncr haryana ghaziabad meerut yeida catchment hsvp haryana shehri vikas pradhikaran (legacy huda)  gda ghaziabad ghaziabad development authority  mda meerut meerut development authority  yeida yamuna expressway industrial development authority  dda delhi delhi development authority  tcp haryana tcp haryana official affordable-housing e-draw  gnida greater noida industrial development authority  noida new okhla industrial development authority  upavp uttar pradesh avas evam vikas parishad  gurgaon gurugram faridabad noida" data-region="delhi-ncr" data-geography="Haryana|Uttar Pradesh|Delhi" data-publication="published">
+      <div class="card-top"><h3>Delhi NCR</h3></div>
+      <p class="region-caption">Delhi &middot; NCR Haryana &middot; Ghaziabad</p>
+      <div class="directory-card-meta"><span class="badge">Published edition</span><span>9 authority sources</span></div>
+      <p class="small">TCP Haryana covers regulated-private flats.</p>
       <div class="card-latest"><span>Latest bulletin</span><time datetime="2026-10-19">19 October 2026</time></div>
       <div class="actions">
-        <a class="button small-button" href="../bulletins/2026-10-19/" aria-label="Read latest bulletin"><span class="button-label-full">Read latest bulletin</span><span class="button-label-short" aria-hidden="true">Read latest</span><span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button" data-region-channel="delhi-ncr" href="https://t.me/propertysoochna" target="_blank" rel="noopener noreferrer"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Join NCR Telegram <span aria-hidden="true">&nearr;</span></a>
+        <a class="button small-button" href="../bulletins/2026-10-19/" aria-label="Read latest bulletin"><span class="button-label-full">Read latest bulletin</span><span class="button-label-short" aria-hidden="true">Read latest</span><span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button" data-region-channel="delhi-ncr" href="https://t.me/propertysoochna" target="_blank" rel="noopener noreferrer"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Join Telegram <span aria-hidden="true">&nearr;</span></a>
       </div>
       <div class="region-card-bottom">
         <a class="region-details" href="../regions/delhi-ncr/">Region details <span aria-hidden="true">&rarr;</span></a>
         <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
       </div>
     </article>
-    <article class="region-card up" data-search="central up lucknow uttar pradesh lda lucknow development authority" data-region="central-up">
-      <div class="card-top"><h3>Central UP</h3><span class="badge">Residential</span></div>
-      <p class="region-caption">Lucknow &middot; Residential plots.</p><p class="authority-label">Authorities covered</p>
-      <ul class="pills" aria-label="Central UP authorities"><li>LDA</li></ul><p class="small">Lucknow Development Authority.</p>
+    <article class="region-card" data-search="mumbai mmr mumbai mmr maharashtra mumbai thane navi mumbai panvel mhada maharashtra housing and area development authority mumbai board cidco city and industrial development corporation of maharashtra  mhada maharashtra housing and area development authority konkan board - mmr properties only " data-region="mumbai-mmr" data-geography="Maharashtra" data-publication="preparing">
+      <div class="card-top"><h3>Mumbai MMR</h3></div>
+      <p class="region-caption">Mumbai &middot; Thane &middot; Navi Mumbai</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
       <div class="card-latest"><span>No bulletin published yet.</span></div>
       <div class="actions">
-        <a class="text-link telegram-button telegram-pending" data-channel-unavailable="central-up" data-region-name="Central UP" href="mailto:propertysoochna@gmail.com?subject=Central%20UP%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Join Central UP Telegram <span aria-hidden="true">&nearr;</span></a>
+        <a class="button small-button" href="../regions/mumbai-mmr/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="mumbai-mmr" data-region-name="Mumbai MMR" href="mailto:propertysoochna@gmail.com?subject=Mumbai%20MMR%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/mumbai-mmr/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="bengaluru bengaluru karnataka bengaluru metro suryanagar khb karnataka housing board  bda bengaluru bangalore development authority  " data-region="bengaluru" data-geography="Karnataka" data-publication="preparing">
+      <div class="card-top"><h3>Bengaluru</h3></div>
+      <p class="region-caption">Bengaluru metro &middot; Suryanagar</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/bengaluru/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="bengaluru" data-region-name="Bengaluru" href="mailto:propertysoochna@gmail.com?subject=Bengaluru%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/bengaluru/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="pune pimpri-chinchwad pune maharashtra pune metro pimpri-chinchwad tathawade mhada maharashtra housing and area development authority pune board - pune catchment only pmrda pune metropolitan region development authority  " data-region="pune" data-geography="Maharashtra" data-publication="preparing">
+      <div class="card-top"><h3>Pune Pimpri-Chinchwad</h3></div>
+      <p class="region-caption">Pune metro &middot; Pimpri-Chinchwad &middot; Tathawade</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/pune/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="pune" data-region-name="Pune Pimpri-Chinchwad" href="mailto:propertysoochna@gmail.com?subject=Pune%20Pimpri-Chinchwad%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/pune/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="hyderabad hyderabad telangana hyderabad metro bandlaguda pocharam mokila medipally hmda hyderabad metropolitan development authority  rajiv swagruha telangana rajiv swagruha corporation  " data-region="hyderabad" data-geography="Telangana" data-publication="preparing">
+      <div class="card-top"><h3>Hyderabad</h3></div>
+      <p class="region-caption">Hyderabad metro &middot; Bandlaguda &middot; Pocharam</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/hyderabad/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="hyderabad" data-region-name="Hyderabad" href="mailto:propertysoochna@gmail.com?subject=Hyderabad%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/hyderabad/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="central up lucknow central up uttar pradesh lucknow contiguous lucknow suburban schemes lda lucknow lucknow development authority  upavp uttar pradesh avas evam vikas parishad  " data-region="central-up" data-geography="Uttar Pradesh" data-publication="preparing">
+      <div class="card-top"><h3>Central UP Lucknow</h3></div>
+      <p class="region-caption">Lucknow &middot; Contiguous Lucknow suburban schemes</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/central-up/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="central-up" data-region-name="Central UP Lucknow" href="mailto:propertysoochna@gmail.com?subject=Central%20UP%20Lucknow%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
       </div>
       <div class="region-card-bottom">
         <a class="region-details" href="../regions/central-up/">Region details <span aria-hidden="true">&rarr;</span></a>
         <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
       </div>
+    </article>
+    <article class="region-card" data-search="jaipur jaipur rajasthan jaipur metro jaipur suburban schemes jda jaipur jaipur development authority  rhb rajasthan housing board  " data-region="jaipur" data-geography="Rajasthan" data-publication="preparing">
+      <div class="card-top"><h3>Jaipur</h3></div>
+      <p class="region-caption">Jaipur metro &middot; Jaipur suburban schemes</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/jaipur/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="jaipur" data-region-name="Jaipur" href="mailto:propertysoochna@gmail.com?subject=Jaipur%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/jaipur/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="chennai chennai tamil nadu chennai metro koyambedu ambattur manali new town perumbakkam tnhb tamil nadu housing board  tnuhdb tamil nadu urban habitat development board  " data-region="chennai" data-geography="Tamil Nadu" data-publication="preparing">
+      <div class="card-top"><h3>Chennai</h3></div>
+      <p class="region-caption">Chennai metro &middot; Koyambedu &middot; Ambattur</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/chennai/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="chennai" data-region-name="Chennai" href="mailto:propertysoochna@gmail.com?subject=Chennai%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/chennai/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="chandigarh tricity chandigarh tricity punjab haryana chandigarh chandigarh mohali new chandigarh panchkula pinjore kalka gmada greater mohali area development authority  hsvp haryana shehri vikas pradhikaran (legacy huda)  chb chandigarh housing board  " data-region="chandigarh-tricity" data-geography="Punjab|Haryana|Chandigarh" data-publication="preparing">
+      <div class="card-top"><h3>Chandigarh Tricity</h3></div>
+      <p class="region-caption">Chandigarh &middot; Mohali &middot; New Chandigarh</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>3 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/chandigarh-tricity/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="chandigarh-tricity" data-region-name="Chandigarh Tricity" href="mailto:propertysoochna@gmail.com?subject=Chandigarh%20Tricity%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/chandigarh-tricity/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="ahmedabad gandhinagar ahmedabad gandhinagar gujarat ahmedabad gandhinagar auda ahmedabad urban development authority  guda gandhinagar urban development authority  ghb gujarat gujarat housing board  " data-region="ahmedabad-gandhinagar" data-geography="Gujarat" data-publication="preparing">
+      <div class="card-top"><h3>Ahmedabad Gandhinagar</h3></div>
+      <p class="region-caption">Ahmedabad &middot; Gandhinagar</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>3 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/ahmedabad-gandhinagar/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="ahmedabad-gandhinagar" data-region-name="Ahmedabad Gandhinagar" href="mailto:propertysoochna@gmail.com?subject=Ahmedabad%20Gandhinagar%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/ahmedabad-gandhinagar/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="kolkata new town kolkata west bengal kolkata metro new town rajarhat wbhb west bengal housing board  wbhidco west bengal housing infrastructure development corporation  kmda kolkata metropolitan development authority  " data-region="kolkata" data-geography="West Bengal" data-publication="preparing">
+      <div class="card-top"><h3>Kolkata New Town</h3></div>
+      <p class="region-caption">Kolkata metro &middot; New Town &middot; Rajarhat</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>3 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/kolkata/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="kolkata" data-region-name="Kolkata New Town" href="mailto:propertysoochna@gmail.com?subject=Kolkata%20New%20Town%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/kolkata/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="indore indore madhya pradesh indore immediate indore development fringe ida indore indore development authority  mphidb madhya pradesh housing and infrastructure development board  " data-region="indore" data-geography="Madhya Pradesh" data-publication="preparing">
+      <div class="card-top"><h3>Indore</h3></div>
+      <p class="region-caption">Indore &middot; Immediate Indore development fringe</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/indore/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="indore" data-region-name="Indore" href="mailto:propertysoochna@gmail.com?subject=Indore%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/indore/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="bhubaneswar cuttack bhubaneswar cuttack odisha bhubaneswar cuttack intervening suburban corridor oshb odisha state housing board  bda bhubaneswar bhubaneswar development authority  kda kataka kataka development authority (legacy cuttack development authority)  " data-region="bhubaneswar-cuttack" data-geography="Odisha" data-publication="preparing">
+      <div class="card-top"><h3>Bhubaneswar Cuttack</h3></div>
+      <p class="region-caption">Bhubaneswar &middot; Cuttack &middot; Intervening suburban corridor</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>3 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/bhubaneswar-cuttack/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="bhubaneswar-cuttack" data-region-name="Bhubaneswar Cuttack" href="mailto:propertysoochna@gmail.com?subject=Bhubaneswar%20Cuttack%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/bhubaneswar-cuttack/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="nagpur nagpur maharashtra nagpur metro mhada maharashtra housing and area development authority nagpur board - nagpur catchment only nit nagpur nagpur improvement trust  nmrda nagpur metropolitan region development authority  " data-region="nagpur" data-geography="Maharashtra" data-publication="preparing">
+      <div class="card-top"><h3>Nagpur</h3></div>
+      <p class="region-caption">Nagpur metro</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>3 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/nagpur/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="nagpur" data-region-name="Nagpur" href="mailto:propertysoochna@gmail.com?subject=Nagpur%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/nagpur/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="bhopal bhopal madhya pradesh bhopal immediate bhopal suburban schemes mphidb madhya pradesh housing and infrastructure development board  bda bhopal bhopal development authority  " data-region="bhopal" data-geography="Madhya Pradesh" data-publication="preparing">
+      <div class="card-top"><h3>Bhopal</h3></div>
+      <p class="region-caption">Bhopal &middot; Immediate Bhopal suburban schemes</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/bhopal/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="bhopal" data-region-name="Bhopal" href="mailto:propertysoochna@gmail.com?subject=Bhopal%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/bhopal/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="visakhapatnam visakhapatnam andhra pradesh visakhapatnam metro local vmrda residential layouts vmrda visakhapatnam metropolitan region development authority  aptidco andhra pradesh township and infrastructure development corporation  " data-region="visakhapatnam" data-geography="Andhra Pradesh" data-publication="preparing">
+      <div class="card-top"><h3>Visakhapatnam</h3></div>
+      <p class="region-caption">Visakhapatnam metro &middot; Local VMRDA residential layouts</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/visakhapatnam/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="visakhapatnam" data-region-name="Visakhapatnam" href="mailto:propertysoochna@gmail.com?subject=Visakhapatnam%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/visakhapatnam/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="vijayawada guntur amaravati vijayawada guntur amaravati andhra pradesh vijayawada guntur amaravati navuluru apcrda andhra pradesh capital region development authority  aptidco andhra pradesh township and infrastructure development corporation  " data-region="vijayawada-guntur-amaravati" data-geography="Andhra Pradesh" data-publication="preparing">
+      <div class="card-top"><h3>Vijayawada Guntur Amaravati</h3></div>
+      <p class="region-caption">Vijayawada &middot; Guntur &middot; Amaravati</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/vijayawada-guntur-amaravati/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="vijayawada-guntur-amaravati" data-region-name="Vijayawada Guntur Amaravati" href="mailto:propertysoochna@gmail.com?subject=Vijayawada%20Guntur%20Amaravati%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/vijayawada-guntur-amaravati/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="nashik nashik maharashtra nashik nashik suburban schemes mhada maharashtra housing and area development authority nashik board - public housing mhada maharashtra housing and area development authority nashik board - 20 percent inclusive housing scheme " data-region="nashik" data-geography="Maharashtra" data-publication="preparing">
+      <div class="card-top"><h3>Nashik</h3></div>
+      <p class="region-caption">Nashik &middot; Nashik suburban schemes</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>1 authority source</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/nashik/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="nashik" data-region-name="Nashik" href="mailto:propertysoochna@gmail.com?subject=Nashik%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/nashik/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="surat surat gujarat surat metro sachin smc surat surat municipal corporation housing  suda surat urban development authority  ghb gujarat gujarat housing board  " data-region="surat" data-geography="Gujarat" data-publication="preparing">
+      <div class="card-top"><h3>Surat</h3></div>
+      <p class="region-caption">Surat metro &middot; Sachin</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>3 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/surat/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="surat" data-region-name="Surat" href="mailto:propertysoochna@gmail.com?subject=Surat%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/surat/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="raipur nava raipur raipur nava raipur chhattisgarh raipur nava raipur atal nagar rda raipur raipur development authority  cghidb chhattisgarh housing and infrastructure development board (legacy cghb)  nranvp nava raipur atal nagar vikas pradhikaran  " data-region="raipur-nava-raipur" data-geography="Chhattisgarh" data-publication="preparing">
+      <div class="card-top"><h3>Raipur Nava Raipur</h3></div>
+      <p class="region-caption">Raipur &middot; Nava Raipur Atal Nagar</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>3 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/raipur-nava-raipur/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="raipur-nava-raipur" data-region-name="Raipur Nava Raipur" href="mailto:propertysoochna@gmail.com?subject=Raipur%20Nava%20Raipur%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/raipur-nava-raipur/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="dehradun rishikesh dehradun rishikesh uttarakhand dehradun rishikesh corridor subject to jurisdiction mdda mussoorie dehradun development authority  uhuda uttarakhand housing and urban development authority  " data-region="dehradun-rishikesh" data-geography="Uttarakhand" data-publication="preparing">
+      <div class="card-top"><h3>Dehradun Rishikesh</h3></div>
+      <p class="region-caption">Dehradun &middot; Rishikesh corridor subject to jurisdiction</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/dehradun-rishikesh/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="dehradun-rishikesh" data-region-name="Dehradun Rishikesh" href="mailto:propertysoochna@gmail.com?subject=Dehradun%20Rishikesh%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/dehradun-rishikesh/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="haridwar roorkee haridwar roorkee uttarakhand haridwar roorkee hrda haridwar-roorkee development authority  uhuda uttarakhand housing and urban development authority  " data-region="haridwar-roorkee" data-geography="Uttarakhand" data-publication="preparing">
+      <div class="card-top"><h3>Haridwar Roorkee</h3></div>
+      <p class="region-caption">Haridwar &middot; Roorkee</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/haridwar-roorkee/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="haridwar-roorkee" data-region-name="Haridwar Roorkee" href="mailto:propertysoochna@gmail.com?subject=Haridwar%20Roorkee%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/haridwar-roorkee/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="kumaon foothills kumaon foothills uttarakhand haldwani rudrapur kashipur dda us nagar district level development authority udham singh nagar  dda nainital district level development authority nainital  uhuda uttarakhand housing and urban development authority  " data-region="kumaon-foothills" data-geography="Uttarakhand" data-publication="preparing">
+      <div class="card-top"><h3>Kumaon Foothills</h3></div>
+      <p class="region-caption">Haldwani &middot; Rudrapur &middot; Kashipur</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>3 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/kumaon-foothills/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="kumaon-foothills" data-region-name="Kumaon Foothills" href="mailto:propertysoochna@gmail.com?subject=Kumaon%20Foothills%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/kumaon-foothills/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="southern himachal himachal south himachal pradesh shimla solan parwanoo baddi himuda himachal pradesh housing and urban development authority  " data-region="himachal-south" data-geography="Himachal Pradesh" data-publication="preparing">
+      <div class="card-top"><h3>Southern Himachal</h3></div>
+      <p class="region-caption">Shimla &middot; Solan &middot; Parwanoo</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>1 authority source</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/himachal-south/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="himachal-south" data-region-name="Southern Himachal" href="mailto:propertysoochna@gmail.com?subject=Southern%20Himachal%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/himachal-south/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="kangra valley kangra valley himachal pradesh dharamshala palampur kangra valley himuda himachal pradesh housing and urban development authority  " data-region="kangra-valley" data-geography="Himachal Pradesh" data-publication="preparing">
+      <div class="card-top"><h3>Kangra Valley</h3></div>
+      <p class="region-caption">Dharamshala &middot; Palampur &middot; Kangra Valley</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>1 authority source</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/kangra-valley/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="kangra-valley" data-region-name="Kangra Valley" href="mailto:propertysoochna@gmail.com?subject=Kangra%20Valley%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/kangra-valley/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="patna patna bihar patna metro bshb bihar state housing board  " data-region="patna" data-geography="Bihar" data-publication="preparing">
+      <div class="card-top"><h3>Patna</h3></div>
+      <p class="region-caption">Patna metro</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>1 authority source</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/patna/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="patna" data-region-name="Patna" href="mailto:propertysoochna@gmail.com?subject=Patna%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/patna/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="ranchi ranchi jharkhand ranchi metro jshb jharkhand state housing board  rrda ranchi regional development authority  " data-region="ranchi" data-geography="Jharkhand" data-publication="preparing">
+      <div class="card-top"><h3>Ranchi</h3></div>
+      <p class="region-caption">Ranchi metro</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/ranchi/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="ranchi" data-region-name="Ranchi" href="mailto:propertysoochna@gmail.com?subject=Ranchi%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/ranchi/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="guwahati guwahati assam guwahati metro ashb assam state housing board  gmda guwahati guwahati metropolitan development authority  " data-region="guwahati" data-geography="Assam" data-publication="preparing">
+      <div class="card-top"><h3>Guwahati</h3></div>
+      <p class="region-caption">Guwahati metro</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/guwahati/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="guwahati" data-region-name="Guwahati" href="mailto:propertysoochna@gmail.com?subject=Guwahati%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/guwahati/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="kochi ernakulam kochi kerala kochi ernakulam urban catchment gcda greater cochin development authority  kshb kerala state housing board  " data-region="kochi" data-geography="Kerala" data-publication="preparing">
+      <div class="card-top"><h3>Kochi Ernakulam</h3></div>
+      <p class="region-caption">Kochi &middot; Ernakulam urban catchment</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/kochi/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="kochi" data-region-name="Kochi Ernakulam" href="mailto:propertysoochna@gmail.com?subject=Kochi%20Ernakulam%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/kochi/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="goa goa goa north goa south goa ghb goa goa housing board  " data-region="goa" data-geography="Goa" data-publication="preparing">
+      <div class="card-top"><h3>Goa</h3></div>
+      <p class="region-caption">North Goa &middot; South Goa</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>1 authority source</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/goa/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="goa" data-region-name="Goa" href="mailto:propertysoochna@gmail.com?subject=Goa%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/goa/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="jammu jammu jammu and kashmir jammu urban region jkhb jammu and kashmir housing board  jda jammu jammu development authority  " data-region="jammu" data-geography="Jammu and Kashmir" data-publication="preparing">
+      <div class="card-top"><h3>Jammu</h3></div>
+      <p class="region-caption">Jammu urban region</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/jammu/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="jammu" data-region-name="Jammu" href="mailto:propertysoochna@gmail.com?subject=Jammu%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/jammu/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
+    </article>
+    <article class="region-card" data-search="srinagar srinagar jammu and kashmir srinagar urban region jkhb jammu and kashmir housing board  sda srinagar srinagar development authority  " data-region="srinagar" data-geography="Jammu and Kashmir" data-publication="preparing">
+      <div class="card-top"><h3>Srinagar</h3></div>
+      <p class="region-caption">Srinagar urban region</p>
+      <div class="directory-card-meta"><span class="badge">Edition in preparation</span><span>2 authority sources</span></div>
+
+      <div class="card-latest"><span>No bulletin published yet.</span></div>
+      <div class="actions">
+        <a class="button small-button" href="../regions/srinagar/">View coverage <span aria-hidden="true">&rarr;</span></a><a class="text-link telegram-button telegram-pending" data-channel-unavailable="srinagar" data-region-name="Srinagar" href="mailto:propertysoochna@gmail.com?subject=Srinagar%20edition"><svg class="telegram-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M21.5 3.6 3 10.7c-.8.3-.8.8-.1 1.1l4.7 1.5L18.4 6.5c.5-.3.9-.1.5.3l-8.8 8-.3 4.6c.4 0 .6-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.4-1.8-1-1.3Z"></path></svg>Channel details <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="region-card-bottom">
+        <a class="region-details" href="../regions/srinagar/">Region details <span aria-hidden="true">&rarr;</span></a>
+        <p class="region-price"><s title="Monthly price after Early Access">Rs 9/month</s> per region</p>
+      </div>
     </article></div></div>
-    <p id="region-empty" class="empty" hidden>No matching region. Try Delhi, Lucknow or an authority name.</p>
+    <p id="region-empty" class="empty" hidden>No matching region. Try another city or authority, or clear the filters. <a href="../contact/">Request a region</a>.</p>
     <div class="section contact-band"><div><h2>Read before you join.</h2><p>Past bulletins show the detail you can expect.</p></div>
       <a class="button secondary" href="../bulletins/">Browse past bulletins &rarr;</a></div></main>
 
@@ -98,7 +527,7 @@
         </div>
         <nav class="footer-column" aria-label="Explore GovPropertySoochna">
           <h2>Explore</h2>
-          <a href="../regions/">Search by region</a>
+          <a href="../regions/">Explore all 32 regions</a>
           <a href="../bulletins/">Past bulletins</a>
           <a href="../about/">About</a>
           <a href="../regions/delhi-ncr/">Delhi NCR edition</a>

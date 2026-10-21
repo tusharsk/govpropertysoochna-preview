@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse dated GovPropertySoochna bulletins by region. Read Delhi NCR&#x27;s published record and check Central UP&#x27;s archive for its publication status.">
+  <meta name="description" content="Browse dated GovPropertySoochna bulletins by region. Read Delhi NCR&#x27;s published record and check every onboarded region&#x27;s archive for its publication status.">
   <meta name="theme-color" content="#087b67">
   <link rel="canonical" href="https://tusharsk.github.io/govpropertysoochna-preview/bulletins/">
   <link rel="icon" href="../assets/logo-e-radar-roof.svg" type="image/svg+xml">
@@ -44,14 +44,18 @@
       <h1>Past bulletins.<br>Organized by region.</h1>
       <p class="lead">See what we found, checked and published.</p>
     </header>
-    <div class="filters" role="group" aria-label="Filter past bulletins by region" data-archive-controls hidden>
+    <div class="archive-controls" data-archive-controls hidden>
+      <div class="filters" role="group" aria-label="Filter past bulletins by region">
       <button type="button" data-archive-filter="" aria-pressed="true"
-              aria-controls="archive-results">All regions</button><button type="button" data-archive-filter="delhi-ncr" aria-pressed="false" aria-controls="archive-results">Delhi NCR</button><button type="button" data-archive-filter="central-up" aria-pressed="false" aria-controls="archive-results">Central UP</button>
+              aria-controls="archive-results">All regions</button>
+      <button type="button" data-archive-filter="delhi-ncr" aria-pressed="false" aria-controls="archive-results">Delhi NCR</button></div>
+      <label class="search-label" for="archive-region">Choose a regional archive</label>
+      <select id="archive-region" aria-controls="archive-results"><option value="">All regions</option><option value="delhi-ncr">Delhi NCR</option><option value="mumbai-mmr">Mumbai MMR</option><option value="bengaluru">Bengaluru</option><option value="pune">Pune Pimpri-Chinchwad</option><option value="hyderabad">Hyderabad</option><option value="central-up">Central UP Lucknow</option><option value="jaipur">Jaipur</option><option value="chennai">Chennai</option><option value="chandigarh-tricity">Chandigarh Tricity</option><option value="ahmedabad-gandhinagar">Ahmedabad Gandhinagar</option><option value="kolkata">Kolkata New Town</option><option value="indore">Indore</option><option value="bhubaneswar-cuttack">Bhubaneswar Cuttack</option><option value="nagpur">Nagpur</option><option value="bhopal">Bhopal</option><option value="visakhapatnam">Visakhapatnam</option><option value="vijayawada-guntur-amaravati">Vijayawada Guntur Amaravati</option><option value="nashik">Nashik</option><option value="surat">Surat</option><option value="raipur-nava-raipur">Raipur Nava Raipur</option><option value="dehradun-rishikesh">Dehradun Rishikesh</option><option value="haridwar-roorkee">Haridwar Roorkee</option><option value="kumaon-foothills">Kumaon Foothills</option><option value="himachal-south">Southern Himachal</option><option value="kangra-valley">Kangra Valley</option><option value="patna">Patna</option><option value="ranchi">Ranchi</option><option value="guwahati">Guwahati</option><option value="kochi">Kochi Ernakulam</option><option value="goa">Goa</option><option value="jammu">Jammu</option><option value="srinagar">Srinagar</option></select>
     </div>
     <p class="notice">Past bulletins are dated records. Availability, prices and deadlines may have changed.
     Recheck official sources before applying or paying.</p>
     <noscript><p class="notice">Region filtering needs JavaScript.
-    All published bulletins are listed below. No Central UP bulletin has been published yet.</p></noscript>
+    All published bulletins are listed below. New regional issues appear only after publication.</p></noscript>
     <p id="archive-count" class="search-status" role="status" aria-live="polite"
        aria-atomic="true">6 published bulletins</p>
     <div id="archive-results" class="archive-grid"><article class="archive-card" data-archive-region="delhi-ncr">
@@ -98,9 +102,9 @@
               <a class="text-link" href="./2026-09-03/">Read bulletin &rarr;</a>
             </article></div>
     <div id="archive-empty" class="empty" hidden>
-      <h2>No Central UP bulletins yet.</h2>
+      <h2 id="archive-empty-title">No published bulletins in this region yet.</h2>
       <p>There's no published issue in this region's archive.</p>
-      <a class="text-link" href="../regions/central-up/">View Central UP coverage &rarr;</a>
+      <a id="archive-empty-link" class="text-link" href="../regions/">View regional coverage &rarr;</a>
     </div>
     <div class="section"><a class="text-link" href="../regions/">Search by region &rarr;</a></div></main>
 
@@ -114,7 +118,7 @@
         </div>
         <nav class="footer-column" aria-label="Explore GovPropertySoochna">
           <h2>Explore</h2>
-          <a href="../regions/">Search by region</a>
+          <a href="../regions/">Explore all 32 regions</a>
           <a href="../bulletins/">Past bulletins</a>
           <a href="../about/">About</a>
           <a href="../regions/delhi-ncr/">Delhi NCR edition</a>
